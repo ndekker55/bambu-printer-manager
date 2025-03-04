@@ -5,15 +5,7 @@ but you can view its source [here](https://github.com/synman/bambu-printer-manag
 import datetime as dt
 import json
 import logging
-import sys
-
-# Create a backwards compatible override decorator
-if sys.version_info >= (3, 12):
-    from typing import override
-else:
-    # For Python < 3.12, create a no-op decorator that preserves type hints
-    def override(func):
-        return func
+from typing import override
 
 LOG_RECORD_BUILTIN_ATTRS = {
     "args",
